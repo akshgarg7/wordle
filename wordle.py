@@ -19,9 +19,10 @@ def checkGuess(target, guess):
 
 
 def playWordle():
-  
-  word_bank = ["HEART", "CHART", "SMART", "START", "PARTY", "CHIEF", "BRIEF", "CRAFT", 
-               "GRACE", "BLAST"]
+
+  word_bank = ["HEART", "CHART", "SMART", "START", "PARTY", "CHIEF", "BRIEF", "CRAFT",
+               "GRACE", "BLAST", "ADIEU", "TARES", "SOARE", "DUCAT", "OUIJA",
+               "CAROM", "ERGOT", "CRAIC", "SQUAB", "ENOKI", "AZURE"]
 
   # Randomly select a target word from the word bank
   target = random.choice(word_bank)
@@ -43,7 +44,7 @@ def playWordle():
     if result == "GGGGG":
       print("Congrats! You guessed the word correctly!")
       return
-      
+
   print(f"Sorry, you've run out of attempts. The correct word was {target}.")
 
 playWordle()
