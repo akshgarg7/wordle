@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wordle Game</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <h1>Wordle Game</h1>
+    <p id="game-status">Welcome to Wordle! You have 6 attempts to guess the correct 5-letter word.</p>
+    <form id="guess-form">
+        <input type="text" id="guess-input" maxlength="5" placeholder="Enter guess here">
+        <button type="submit">Submit Guess</button>
+    </form>
+    <pre id="guess-output"></pre>
+    <script src="wordle.js"></script>
+</body>
+</html>
