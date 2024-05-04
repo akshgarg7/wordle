@@ -1,3 +1,4 @@
+# devin was here
 from collections import Counter
 import random
 
@@ -19,8 +20,8 @@ def checkGuess(target, guess):
 
 
 def playWordle():
-  
-  word_bank = ["HEART", "CHART", "SMART", "START", "PARTY", "CHIEF", "BRIEF", "CRAFT", 
+
+  word_bank = ["HEART", "CHART", "SMART", "START", "PARTY", "CHIEF", "BRIEF", "CRAFT",
                "GRACE", "BLAST"]
 
   # Randomly select a target word from the word bank
@@ -43,7 +44,7 @@ def playWordle():
     if result == "GGGGG":
       print("Congrats! You guessed the word correctly!")
       return
-      
+
   print(f"Sorry, you've run out of attempts. The correct word was {target}.")
 
 playWordle()
