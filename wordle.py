@@ -5,13 +5,15 @@ def checkGuess(target, guess):
   res = ""
   m = Counter(target)
   for i, g in enumerate(guess):
-    if m[g] > 0 and g in target:
+    if g in target:
       if g == target[i]:
         res += "G"
         m[g] -= 1
-      else:
+      elif m[g] > 0:
         res += "Y"
         m[g] -= 1
+      else:
+        res += "W"
     else:
       res += "W"
 
@@ -19,9 +21,11 @@ def checkGuess(target, guess):
 
 
 def playWordle():
-  
-  word_bank = ["HEART", "CHART", "SMART", "START", "PARTY", "CHIEF", "BRIEF", "CRAFT", 
-               "GRACE", "BLAST"]
+
+  word_bank = ["HEART", "CHART", "SMART", "START", "PARTY", "CHIEF", "BRIEF", "CRAFT",
+               "GRACE", "BLAST", "ADIEU", "TARES", "SOARE", "DUCAT", "OUIJA",
+               "CAROM", "ERGOT", "CRAIC", "SQUAB", "ENOKI", "AZURE", "FLUME", "QUIRK",
+               "JAZZY", "BOXED", "FJORD", "PIXEL", "GLYPH", "KNAVE", "WHACK"]
 
   # Randomly select a target word from the word bank
   target = random.choice(word_bank)
@@ -43,7 +47,7 @@ def playWordle():
     if result == "GGGGG":
       print("Congrats! You guessed the word correctly!")
       return
-      
+
   print(f"Sorry, you've run out of attempts. The correct word was {target}.")
 
 playWordle()
